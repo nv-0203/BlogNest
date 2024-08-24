@@ -1,0 +1,137 @@
+.image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.image img {
+  max-width: 100%;
+  /* Ensure the image scales down if necessary */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional: add some rounding to the image corners */
+}
+
+a {
+  color: #333;
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+time {
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  /* Increase padding to make the button bigger */
+  font-size: 1rem;
+  /* Adjust font size for a bigger button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Center the content within the button */
+  gap: 8px;
+  /* Increase gap between the icon and text */
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #ff3333;
+}
+
+.delete-btn svg {
+  width: 24px;
+  /* Increase the size of the icon */
+  height: 24px;
+}
+
+.delete-btn-container {
+  display: flex;
+  justify-content: center;
+  /* Center the button within the container */
+  width: fit-content;
+  /* Ensure the container only takes up as much space as the button */
+  margin: 0 auto;
+  /* Center the container within its parent div */
+}
+
+.vote-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.vote-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vote-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.vote-btn:not(:disabled):hover .vote-icon {
+  transform: scale(1.1);
+}
+
+.vote-btn.active .vote-icon {
+  filter: brightness(0.7);
+}
+
+.vote-count {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.user-votes {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.author a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.author a:hover {
+  text-decoration: underline;
+}
+
+.content{
+  padding: 0 100px;
+}

@@ -1,0 +1,25 @@
+.index-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 20px; /* Space between the grid items */
+    padding: 20px;
+    position: relative; /* Allow absolute positioning within the container */
+  }
+  
+  .sort-container {
+    grid-column: 1 / -1; /* Span across both columns */
+    justify-self: end; /* Align to the right within the grid */
+    margin-bottom: 20px;
+  }
+  
+  .sort-container label {
+    margin-right: 10px;
+  }
+  
+  #sort-select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+

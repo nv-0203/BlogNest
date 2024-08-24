@@ -1,0 +1,146 @@
+.profile-page {
+    display: flex;
+    height: calc(100vh - 60px);
+    /* Adjust based on your header/footer height */
+    overflow: hidden;
+}
+
+.posts-section {
+    flex: 0 0 70%;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+}
+
+.profile-section {
+    flex: 0 0 30%;
+    padding-left: 20px;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.profile-section img {
+    width: auto;
+    max-height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-section h1 {
+    text-align: left;
+}
+
+.edit-profile {
+    display: flex;
+    justify-content: center; /* Aligns the button to the right */
+    padding: 10px;
+}
+
+.logout-btn-container{
+    display: flex;
+    justify-content: center; /* Aligns the button to the right */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-btn, .logout-btn {
+    padding: 10px 20px; /* Adds some padding around the button */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 16px; /* Adjusts the font size */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Removes the underline */
+    display: inline-block; /* Ensures proper sizing */
+    width: auto;
+}
+
+.edit-btn {
+    background-color: #e0e0e0; /* Greyish background */
+    color: #333; /* Darker grey text */
+}
+
+.edit-btn:hover {
+    background-color: #d3d3d3; /* Slightly darker grey on hover */
+}
+
+.edit-btn:active {
+    background-color: #bdbdbd; /* Even darker grey when pressed */
+}
+
+.edit-btn:focus {
+    outline: none; /* Removes the outline on focus */
+    box-shadow: 0 0 5px rgba(160, 160, 160, 0.8); /* Adds a slight grey glow on focus */
+}
+
+/* Existing logout button styles */
+.logout-btn {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+}
+
+.logout-btn:hover {
+    background-color: #ff3333; /* Darker red on hover */
+}
+
+.logout-btn:active {
+    background-color: #cc0000; /* Even darker red when pressed */
+}
+
+.logout-btn:focus {
+    outline: none; /* Removes the outline on focus */
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.8); /* Adds a slight glow on focus */
+}
+
+
+.sort-container {
+    margin-bottom: 20px;
+}
+
+.sort-container label {
+    margin-right: 10px;
+}
+
+#sort-select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* .user-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+} */
+
+/* Customize scrollbars */
+.posts-section::-webkit-scrollbar,
+.profile-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.posts-section::-webkit-scrollbar-track,
+.profile-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.posts-section::-webkit-scrollbar-thumb,
+.profile-section::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.posts-section::-webkit-scrollbar-thumb:hover,
+.profile-section::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+  
