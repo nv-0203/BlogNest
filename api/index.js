@@ -19,7 +19,7 @@ const secret = process.env.JWT_SECRET;
 app.use(cors({
     credentials: true,
     origin: process.env.NODE_ENV === 'production' 
-      ? 'https://your-frontend-domain.com'
+      ? 'https://blognest-lo62.onrender.com'
       : 'http://localhost:3000'
 }));
 
