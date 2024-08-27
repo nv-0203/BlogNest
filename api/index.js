@@ -84,11 +84,15 @@ app.post('/login', async (req, res) => {
         // logged in
         jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
             if (err) throw err;
-            res.cookie('token', token).json({
-                id: userDoc._id,
-                username,
+            res.cookie('token', token, {
+              httpOnly: true,
+              secure: process.env.NODE_ENV === 'production', // Only use HTTPS in production
+              sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+            }).json({
+              id: userDoc._id,
+              username,
             });
-        });
+          });
     } else {
         res.status(400).json('wrong credentials');
     }
@@ -320,6 +324,9 @@ app.delete('/post/:id', async (req, res) => {
 });
 
 app.post('/post/:id/upvote', async (req, res) => {
+    console.log('Cookies:', req.cookies);
+    console.log('Token:', req.cookies.token);
+    
     const { token } = req.cookies;
 
     if (!token) {
