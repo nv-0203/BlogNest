@@ -39,3 +39,14 @@
 .post-form .Editor {
     margin-top: 15px;
 }
+
+.post-form input[type="file"] {
+    margin-bottom: 0;
+}
+
+.default-image-message {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 0.9em;
+    color: #666;
+}
