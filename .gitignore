@@ -1,18 +1,10 @@
-.env
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore node_modules in root and all subdirectories
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Ignore .env files in root and all subdirectories
+**/.env
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
+# Keep the existing ignores
 .DS_Store
 .env.local
 .env.development.local
@@ -22,4 +14,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.env*
+
+# Ignore build directories
+**/build/
+
+# Ignore coverage directories
+**/coverage/
+
+# Ignore .pnp files
+**/.pnp
+**/.pnp.js
